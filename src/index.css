@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@import "./utility.css";
+
+@theme {
+  /* Font Families */
+  --font-primary: "Plus Jakarta Sans", sans-serif;
+
+  /* Font Sizes + Line Heights + Font Weights */
+  --text-caption: 12px;
+  --leading-caption: 133%;
+  --weight-caption: 400;
+
+  --text-button: 14px;
+  --leading-button: 18px;
+  --weight-button: 600;
+
+  --text-small: 14px;
+  --leading-small: 143%;
+  --weight-small: 400;
+
+  --text-body: 16px;
+  --leading-body: 150%;
+  --weight-body: 400;
+
+  --text-heading-3: 18px;
+  --leading-heading-3: 144%;
+  --weight-heading-3: 600;
+
+  --text-heading-2: 20px;
+  --leading-heading-2: 140%;
+  --weight-heading-2: 600;
+
+  --text-heading-1: 24px;
+  --leading-heading-1: 133%;
+  --weight-heading-1: 700;
+}
+

@@ -1,0 +1,50 @@
+
+/* === Utility Classes === */
+.caption {
+  @apply font-primary;
+  font-size: theme(--text-caption);
+  line-height: theme(--leading-caption);
+  font-weight: theme(--weight-caption);
+}
+
+.button-text {
+  @apply font-primary;
+  font-size: theme(--text-button);
+  line-height: theme(--leading-button);
+  font-weight: theme(--weight-button);
+}
+
+.small-text {
+  @apply font-primary;
+  font-size: theme(--text-small);
+  line-height: theme(--leading-small);
+  font-weight: theme(--weight-small);
+}
+
+.body-text {
+  @apply font-primary;
+  font-size: theme(--text-body);
+  line-height: theme(--leading-body);
+  font-weight: theme(--weight-body);
+}
+
+.heading-3 {
+  @apply font-primary;
+  font-size: theme(--text-heading-3);
+  line-height: theme(--leading-heading-3);
+  font-weight: theme(--weight-heading-3);
+}
+
+.heading-2 {
+  @apply font-primary;
+  font-size: theme(--text-heading-2);
+  line-height: theme(--leading-heading-2);
+  font-weight: theme(--weight-heading-2);
+}
+
+.heading-1 {
+  @apply font-primary;
+  font-size: theme(--text-heading-1);
+  line-height: theme(--leading-heading-1);
+  font-weight: theme(--weight-heading-1);
+}
