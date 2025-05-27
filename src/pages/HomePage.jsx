@@ -1,4 +1,9 @@
-import Header from "../Components/header";
+import Header from "../Components/Header";
+import CardPromo from "../Components/CardPromo";
+import SearchBar from "../Components/SearchBar";
+import CardProduct from "../Components/CardProduct";
+import Category from "../Components/Category";
+import Filter from "../Components/filter";
 
 function HomePage() {
     return (
@@ -7,29 +12,27 @@ function HomePage() {
             <Header />
 
             {/* Content : sm */}
-            <div className="flex flex-col space-y-[36px] m-4 w-auto h-auto bg-blue-600 py-6">
+            <div className="flex flex-col space-y-[36px] p-4 h-auto">
 
                 {/* Promo Card : sm */}
-                <div className="bg-gray-300 h-[263px]">
-
-                </div>
+                <CardPromo />
 
                 {/* Search Bar : sm */}
-                <div className="bg-gray-300 py-14 h-14">
-
-                </div>
+                <SearchBar />
 
                 {/* Filter and Recommendation : sm */}
-                <div className="bg-gray-300 h-8">
-
+                <div className="flex flex-row justify-between h-auto">
+                    <Category />
+                    <Filter />
                 </div>
 
                 {/* Product Card : sm */}
-                <div className="bg-gray-300 h-[1882px] flex flex-row space-x-4">
-                    <div className="bg-gray-500 w-3/6">
-                        test
+                <div className="h-[1882px] flex flex-row gap-4">
+                    <div className="w-3/6">
+                        <CardProduct />
                     </div>
-                    <div className="bg-gray-500 w-3/6">
+                    <div className="w-3/6">
+                        <CardProduct />
                     </div>
                 </div>
             </div>
