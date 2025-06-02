@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { dropdown } from '../styles/dropdownStyles';
-import { ChevronDownIcon, ChevronUpIcon, ChevronLeftIcon } from "@heroicons/react/16/solid";
+import { ChevronDownIcon, ChevronUpIcon, ChevronLeftIcon, AdjustmentsHorizontalIcon } from "@heroicons/react/16/solid";
 
 export default function Drowpdown({ label, isOpen, onToggle, children, variant = 'default' }) {
     const ref = useRef();
@@ -19,8 +19,7 @@ export default function Drowpdown({ label, isOpen, onToggle, children, variant =
 
     return (
         <div className={style.wrapper()} ref={ref} >
-            <button onClick={() => onToggle(!isOpen)} className={style.trigger()}>
-                <span className="flex items-center">{isOpen && <ChevronLeftIcon className="w-4 h-4" />}</span>
+            <button onClick={() => onToggle(!isOpen)} className={`${style.trigger()}`}>
                 {label}
                 <span className="flex items-center">{isOpen ? <ChevronUpIcon className="w-4 h-4" /> : <ChevronDownIcon className="w-4 h-4" />}</span>
             </button>

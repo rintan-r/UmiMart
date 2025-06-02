@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Header from "../Components/Header";
 import CardPromo from "../Components/CardPromo";
 import SearchBar from "../Components/SearchBar";
@@ -6,6 +7,8 @@ import Category from "../Components/Category";
 import Filter from "../Components/filter";
 
 function HomePage() {
+    const [viewState, setViewState] = useState("default");
+
     return (
         <div>
             {/* Header : sm */}
@@ -22,8 +25,13 @@ function HomePage() {
 
                 {/* Filter and Recommendation : sm */}
                 <div className="flex flex-row justify-between h-auto">
-                    <Category />
-                    <Filter />
+                    {(viewState !== "filter-only") && (
+                        <Category viewState={viewState} setViewState={setViewState} />
+                    )}
+
+                    {(viewState !== "category-only") && (
+                        <Filter viewState={viewState} setViewState={setViewState} />
+                    )}
                 </div>
 
                 {/* Product Card : sm */}
@@ -56,7 +64,7 @@ function HomePage() {
                     <CardProduct />
                     <CardProduct />
 
-                    
+
                 </div>
             </div>
         </div>

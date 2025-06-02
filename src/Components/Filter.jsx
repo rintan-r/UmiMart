@@ -1,12 +1,31 @@
-import { AdjustmentsHorizontalIcon } from "@heroicons/react/16/solid";
+import Dropdown from './Dropdown';
+import { useState, useEffect } from 'react';
 
-function Filter() {
+function Filter({ viewState, setViewState }) {
+    const [isOpen, setOpen] = useState(false);
+
+    useEffect(() => {
+        if (isOpen) {
+            setViewState("filter-only");
+        } else if (viewState === "filter-only") {
+            setViewState("default");
+        }
+    }, [isOpen]);
+
     return (
-        <div className="">
-            <div className="flex flex-row py-1 gap-2">
-                <span className="caption">Filter</span>
-                <AdjustmentsHorizontalIcon className="w-4 h-4" />
-            </div>
+        <div>
+            <Dropdown
+                label="Filter"
+                isOpen={isOpen}
+                onToggle={setOpen}
+                variant="default"
+            >
+                {/* Dropdown Content */}
+                <div>
+                    <p>test</p>
+                </div>
+
+            </Dropdown>
         </div>
     )
 }

@@ -1,12 +1,20 @@
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import Dropdown from './Dropdown';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-function Category() {
+function Category({ viewState, setViewState }) {
     const [isOpen, setOpen] = useState(false);
+
+    useEffect(() => {
+        if (isOpen) {
+            setViewState("category-only");
+        } else if (viewState === "category-only"){
+            setViewState ("default");
+        }
+    }, [isOpen]);
      
     return (
-        <div className="">
+        <div>
             <Dropdown
                 label="Rekomendasi untukmu"
                 isOpen={isOpen}
