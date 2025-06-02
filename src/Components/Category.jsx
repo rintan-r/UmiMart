@@ -1,12 +1,24 @@
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
+import Dropdown from './Dropdown';
+import { useState } from 'react';
 
 function Category() {
+    const [isOpen, setOpen] = useState(false);
+     
     return (
         <div className="">
-            <div className="flex flex-row py-2 gap-2">
-                <span className="caption">Rekomendasi untukmu</span>
-                <ChevronDownIcon className="w-4 h-4" />
-            </div>
+            <Dropdown
+                label="Rekomendasi untukmu"
+                isOpen={isOpen}
+                onToggle={setOpen}
+                variant="default"
+            >
+                <ul className="text-sm">
+                    <li className="py-2"> Daging </li>
+                    <li className="py-2"> Sayur </li>
+                    <li className="py-2"> Buah </li>
+                </ul>
+            </Dropdown>
         </div>
     )
 }

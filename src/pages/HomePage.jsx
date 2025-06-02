@@ -27,13 +27,36 @@ function HomePage() {
                 </div>
 
                 {/* Product Card : sm */}
-                <div className="h-[1882px] flex flex-row gap-4">
-                    <div className="w-3/6">
-                        <CardProduct />
-                    </div>
-                    <div className="w-3/6">
-                        <CardProduct />
-                    </div>
+                <div className="w-full grid grid-cols-2 gap-4">
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
+
+                    
                 </div>
             </div>
         </div>
